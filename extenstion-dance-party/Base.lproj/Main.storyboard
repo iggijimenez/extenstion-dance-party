@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,40 +14,54 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="extenstion_dance_party" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRT-ip-nPL">
-                                <rect key="frame" x="164" y="370" width="87" height="47"/>
+                                <rect key="frame" x="144" y="255" width="87" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                <state key="normal">
+                                <state key="normal" title="Colorize">
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="colorizeBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KTF-kh-Oyr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGM-gf-3DI">
-                                <rect key="frame" x="164" y="425" width="87" height="47"/>
+                                <rect key="frame" x="144" y="310" width="87" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                <state key="normal">
+                                <state key="normal" title="Wiggle">
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="wiggleBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o5G-Ou-Gzt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8d-MI-Wae">
-                                <rect key="frame" x="164" y="480" width="87" height="47"/>
+                                <rect key="frame" x="144" y="365" width="87" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                <state key="normal">
+                                <state key="normal" title="Dim">
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="dimBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PF0-0A-6ui"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="colorizeBtn" destination="lRT-ip-nPL" id="3Zr-sW-Vqc"/>
+                        <outlet property="dimBtn" destination="l8d-MI-Wae" id="ddA-Op-25x"/>
+                        <outlet property="wiggleBtn" destination="WGM-gf-3DI" id="RZC-Ih-LGd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
